@@ -21,7 +21,17 @@ This repository contains my coursework, assignments, notes, and projects complet
 (Your folder tree here)
 
 ## Assignments
-(Links to assignment folders)
+### **SQL Assignments**
+- *Coming soon*
+
+### **Python Assignments**
+- *Coming soon*
+
+### **Excel Assignments**
+- *Coming soon*
+
+### **Tableau Assignments**
+- *Coming soon*
 
 ## Final Project
 (Placeholder for later)
