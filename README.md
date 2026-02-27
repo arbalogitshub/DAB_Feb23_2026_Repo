@@ -26,7 +26,7 @@ This repository contains my coursework, assignments, notes, and projects complet
 - *Coming soon*
 
 ### **Python Assignments**
-- *Coming soon*
+- [Introduction to Python - Practice Exercise](Python/Assignments/Python_Assignment_1.ipynb)
 
 ### **Excel Assignments**
 - *Coming soon*
