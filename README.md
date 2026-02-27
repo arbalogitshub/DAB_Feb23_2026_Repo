@@ -15,7 +15,8 @@ This repository contains my coursework, assignments, notes, and projects complet
 (Your text here)
 
 ## Skills & Tools
-(Your text here)
+### Tools: 
+- Python
 
 ## Repository Structure
 (Your folder tree here)
