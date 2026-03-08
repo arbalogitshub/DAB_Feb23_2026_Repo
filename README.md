@@ -28,7 +28,7 @@ This repository contains my coursework, assignments, notes, and projects complet
 ### **Python Assignments**
 - [Introduction to Python - Practice Exercise](Python/Assignments/Python_Assignment_1.ipynb)
 - [Python Conditionals - Practice Exercise](Python/Assignments/python_conditionals_practice_excercise.ipynb)
-- [Python Functions - Practice Exercise]()
+- [Python Functions - Practice Exercise](Python/Assignments/python_functions_practice_excercise.ipynb)
 - [Python Lists and Dictionaries - Practice Exercise](Python/Assignments/python_lists_dictionaries_practice_excercise.ipynb)
 - [Python Data Analytics Workshop](Python/Assignments/week2_python_data_analytics_workshop.ipynb)
 
