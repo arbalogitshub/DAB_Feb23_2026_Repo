@@ -54,4 +54,4 @@ This repository contains the tools and skills I learned during my Data Analytics
 - *Coming soon*
 
 ## Final Project
-(Placeholder for later)
+- *Coming soon*
