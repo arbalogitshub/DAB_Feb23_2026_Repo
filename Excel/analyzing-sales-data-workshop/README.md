@@ -162,7 +162,15 @@ Both Charts show that there is a mild negative realtionship between mileage and 
 * Yes, In the second half of 2024 Quarters 3 and 4 accumalted a total of $4,191,301 while the first half only accumalted $1,963,201, this shows a strong seasonal pattern where sales increase near the end of the year.
 
 ### Spot Patterns Across Vehicle Categories
-* 
+<b> Are certain vehicle types (SUVs, sedans, electric vehicles) growing faster? </b> 
+* SUVs were the top sold vehicles in 2024 with ($2,433,600)
+
+<b> Is there a shift in consumer preferences for certain fuel types? </b> 
+Overall, we can see customers having a preference for Gasoline type vehicles.
+<img width="432" height="145" alt="image" src="https://github.com/user-attachments/assets/47abb929-fed6-4932-a2ed-5a6014e060a2" />
+
+
+
 
   
 
