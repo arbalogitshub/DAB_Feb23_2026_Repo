@@ -91,7 +91,7 @@ Several columns required data formatting such as the following:
 
 <img width="456" height="169" alt="image" src="https://github.com/user-attachments/assets/fd7da180-81c2-4e42-af69-a24dacf67d94" />
 
-The highest sales per vehicle category in 2024 were the SUVs ($2,4336), while the lowest sales were from Vans ($199,501).
+The highest sales per vehicle category in 2024 were the SUVs ($2,433,600), while the lowest sales were from Vans ($199,501).
 
 
 <b>Pivot Table: Quarter Total Sales Per Quarter/ Total Sales per Month</b>
@@ -112,9 +112,44 @@ This pattern shows strong seasonality, with sales increasing significantly towar
 
 The highest sales per dealership region in 2024 was the Western region ($2,373,601), while the lowest were from the Midwestern region ($1,248,001)
 
-<b> Average Selling Price by Make</b>
+<b>Key Automotive Metrics:</b>
+* Total Vehicle Sales: $6,154,502.00
+* Average Selling Price by Model: $46,028.48
+* Average Selling Price by Make: $48,675.19
+* Best Selling Vehicle Category: SUV ($2,433,600)
+* Lowest Seeling Vehicle Category: Van ($199,501)
 
-<img width="432" height="241" alt="image" src="https://github.com/user-attachments/assets/0eaa2adf-4819-4f6c-9f5c-d5c70bd0479a" />
+### Car Sales Visualizations 
+<b> Bar Chart Total Sales by Make </b> 
+
+<img width="800" height="499" alt="image" src="https://github.com/user-attachments/assets/23ac6bc0-70c4-47ea-8a0d-08ed645237b5" />
+
+* Bar Chart shows that Tesla made the most sales ($1,160,500).
+* Honda ($554,300) had made the least amount of sales.
+
+<b> Line Chart 2024 Quarterly Sales Trend </b>
+ 
+ <img width="798" height="452" alt="image" src="https://github.com/user-attachments/assets/eec9f81a-81a1-4bde-adfd-6e22b286dfad" />
+
+ * Overall we can see sales increasing, especially in the second half (Q3 + Q4) of 2024.
+
+<b> Pie Chart: Market Share by Vehicle Make </b> 
+
+kkkk
+
+<b> Complex Chart </b> 
+
+<img width="876" height="557" alt="image" src="https://github.com/user-attachments/assets/3ce538c7-23aa-42c7-95be-f969db93acea" />
+
+
+“There is a negative relationship between mileage and vehicle sale price, but the low R² value (~0.2) indicates that mileage explains only a small portion of price variation. This suggests other factors—such as vehicle make, model, year, and condition—play a significant role in determining price.
+
+
+
+
+
+
+
 
 
   
