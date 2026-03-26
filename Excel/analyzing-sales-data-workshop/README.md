@@ -105,7 +105,6 @@ The following insights can be drawn the the table above:
 This pattern shows strong seasonality, with sales increasing significantly toward the end of the year.
 
 
-
 <b>Pivot Table: Regions	Total Sales per Region </b>
 
 <img width="432" height="145" alt="image" src="https://github.com/user-attachments/assets/4efd8fb0-e91e-4aa4-81dc-09665c9d1011" />
@@ -154,9 +153,16 @@ Both Charts show that there is a mild negative realtionship between mileage and 
 
 ## Business Recommdendations 
 
+### Identify Key Trends 
+<b>Which vehicle makes and models are performing best/worst? </b> 
+* Best Performing Make/Model: Tesla Roadster 2.0 ($199,900)
+* Worst Performing Make/Model: Chevloret Sparl ($16,500)
 
+<b> Are there seasonal patterns in car buying behavior?</b>
+* Yes, In the second half of 2024 Quarters 3 and 4 accumalted a total of $4,191,301 while the first half only accumalted $1,963,201, this shows a strong seasonal pattern where sales increase near the end of the year.
 
-
+### Spot Patterns Across Vehicle Categories
+* 
 
   
 
