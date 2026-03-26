@@ -135,18 +135,24 @@ The highest sales per dealership region in 2024 was the Western region ($2,373,6
 
 <b> Pie Chart: Market Share by Vehicle Make </b> 
 
-kkkk
+<img width="752" height="452" alt="image" src="https://github.com/user-attachments/assets/79fc526c-14d4-4f48-b35e-bfa0f3555a09" />
+
+For Vehicle Category, most of the sales were attributed to the SUV. 
 
 <b> Complex Chart </b> 
+This chart shows the realtionship between a vehicle's mileage and its sales price.
 
-<img width="876" height="557" alt="image" src="https://github.com/user-attachments/assets/3ce538c7-23aa-42c7-95be-f969db93acea" />
-
-
-“There is a negative relationship between mileage and vehicle sale price, but the low R² value (~0.2) indicates that mileage explains only a small portion of price variation. This suggests other factors—such as vehicle make, model, year, and condition—play a significant role in determining price.
+<img width="828" height="529" alt="image" src="https://github.com/user-attachments/assets/ebf4fb7f-43a4-47c6-b914-82c8788fb33f" />
 
 
+This chart shows the relationship between a vehicle’s mileage and its sales price after removing extreme outliers.
+<img width="828" height="499" alt="image" src="https://github.com/user-attachments/assets/0a9df673-8b14-4900-adce-78dc669fa234" />
 
+To make the previous graph clearer, I focused on the most representative data points. I removed sales prices that were unusually high or low (outliers), which were identified using a standard statistical method (the Interquartile Range) to ensure the remaining data better reflects typical trends. Despite removing the outliers, the chart still shows 
 
+Both Charts show that there is a mild negative realtionship between mileage and vehicle price. To make the previous graph clearer, I focused on the most representative data points. I removed sales prices that were unusually high or low (outliers), which were identified using a standard statistical method (the Interquartile Range) to ensure the remaining data better reflects typical trends. Despite removing the outliers, the chart still shows that mileage alone is not a strong predictor of pricing. 
+
+## Business Recommdendations 
 
 
 
