@@ -143,32 +143,95 @@ This chart shows the realtionship between a vehicle's mileage and its sales pric
 
 <img width="828" height="529" alt="image" src="https://github.com/user-attachments/assets/ebf4fb7f-43a4-47c6-b914-82c8788fb33f" />
 
-
 This chart shows the relationship between a vehicle’s mileage and its sales price after removing extreme outliers.
 <img width="828" height="499" alt="image" src="https://github.com/user-attachments/assets/0a9df673-8b14-4900-adce-78dc669fa234" />
 
-To make the previous graph clearer, I focused on the most representative data points. I removed sales prices that were unusually high or low (outliers), which were identified using a standard statistical method (the Interquartile Range) to ensure the remaining data better reflects typical trends. Despite removing the outliers, the chart still shows 
-
-Both Charts show that there is a mild negative realtionship between mileage and vehicle price. To make the previous graph clearer, I focused on the most representative data points. I removed sales prices that were unusually high or low (outliers), which were identified using a standard statistical method (the Interquartile Range) to ensure the remaining data better reflects typical trends. Despite removing the outliers, the chart still shows that mileage alone is not a strong predictor of pricing. 
+Both Charts show that there is a mild negative realtionship between mileage and vehicle price. To make the first graph clearer, I focused on the most representative data points. I removed sales prices that were unusually high or low (outliers), which were identified using a standard statistical method (the Interquartile Range) to ensure the remaining data better reflects typical trends. Despite removing the outliers, the chart still shows that mileage alone is not a strong predictor of pricing. 
 
 ## Business Recommdendations 
 
 ### Identify Key Trends 
 <b>Which vehicle makes and models are performing best/worst? </b> 
-* Best Performing Make/Model: Tesla Roadster 2.0 ($199,900)
-* Worst Performing Make/Model: Chevloret Sparl ($16,500)
+* Best Performing Make/Model: Tesla Roadster 2.0 ($199,900).
+* Worst Performing Make/Model: Chevloret Spark ($16,500).
 
 <b> Are there seasonal patterns in car buying behavior?</b>
 * Yes, In the second half of 2024 Quarters 3 and 4 accumalted a total of $4,191,301 while the first half only accumalted $1,963,201, this shows a strong seasonal pattern where sales increase near the end of the year.
 
 ### Spot Patterns Across Vehicle Categories
 <b> Are certain vehicle types (SUVs, sedans, electric vehicles) growing faster? </b> 
-* SUVs were the top sold vehicles in 2024 with ($2,433,600)
+* SUVs were the top sold vehicles in 2024 with ($2,433,600).
 
 <b> Is there a shift in consumer preferences for certain fuel types? </b> 
-Overall, we can see customers having a preference for Gasoline type vehicles.
+* Overall, we can see customers having a preference for Gasoline type vehicles.
 <img width="432" height="145" alt="image" src="https://github.com/user-attachments/assets/47abb929-fed6-4932-a2ed-5a6014e060a2" />
 
+<b> Are premium models performing differently than economy models? </b> 
+Yes,
+
+### Actionable Automotive Business Recommendations
+#### Inventory optimization strategies based on sales patterns
+<b>Supporting Data:</b> 
+* SUVs generated $2.43 million (best category sales).
+* Vans generated only $199K (worst category sales) .
+* Strong Quarter 3 - Quarter 4 demand surge (2.13x higher than first half of 2024).
+
+<b>Recommendations:</b> 
+* Increase SUV inventory prior to the start of the third quarter.
+* Reduce van inventory due to low demand.
+* With higher sales in quarters 3 and 4, increase inventory/stock prior near the end of the second quarter.
+
+#### Pricing recommendations for specific vehicle segments
+<b>Supporting Data:</b> 
+* Average selling price ranges from $46K - $48K.
+* Premium model (Tesla Roadster 2.0) perofrms strongly at $199K
+* Weak Correlation between vehicle mileage and sales price meaning prices are not strongly driven by car mileage.
+* Strong Quarter 3 - Quarter 4 demand surge (2.13x higher than first half of 2024).
+
+<b>Recommendations:</b> 
+* Maintain pricing for high demand vehicles of expensive brands (e.g. Tesla), Data showed strong sales despite the high price.
+* Low-performing sales such as Vans should obtain small discounts to asisst in clearing the inventory
+* Don't emphazie vehicle mileage as a primary indicator for pricing, consider other factors such as fuel type, make, model, year.
+
+#### Marketing campaign focus areas based on high-potential vehicle categories
+<b>Supporting Data:</b> 
+* SUVs = highest revenue category
+* Tesla = top-performing brand ($1.16M)
+* Gasoline vehicles still dominate preference
+
+<b>Recommendations:</b> 
+* Allocate most of marketing budget to SUVs, highlight practicality, family use and versatility.
+* Run premium brand campaign ads around Tesla and similar high end vehicles, focus on inoovation, performance and status
+* Segment campaigns by fuel types: Gas types for reliability & familiarity, Electric Vehicles for cost savings & sustainability.
+
+#### Seasonal promotion strategies aligned with buying patterns
+<b>Supporting Data:</b> 
+* Quarter 4: $2.18M (best quarter in sales) 
+* December: $895K Best Selling Month
+* Quarter 1: Weakest Quarterly Sales
+
+<b>Recommendations:</b> 
+* Increase or Implement aggressive promitions in Quarter 4 via holiday sales events, year end clearance sales
+* Have invetory ready no later Quarter 3
+* Compensate Quarter 1 sales with disounts, trade in bonueses, or deals 
+
+#### Sales team resource allocation based on regional performance
+<b>Supporting Data:</b> 
+* West region = $2.37M (best performing region)
+* Midwest = $1.25M (worst performing region)
+
+<b>Recommendations:</b> 
+* Allocate top-performing car sales person to the Western region for maximum revenue opporunity
+* Increase staffing during third and fourth quarters in higher performing regions to match demand
+  surge.
+* Introduce performance-basd incentives for region and season.
+
+  ### Key TakeAway:
+  1. Invest more on SUVs since they are the best selling vehicle category
+  2. Exploit Quarter 4 season the highest sales period
+  3. Keep premium pricing for high end supports since demand supports it
+  4. Cut losses on vans
+  5. Allocate resources to western region during peak months.
 
 
 
