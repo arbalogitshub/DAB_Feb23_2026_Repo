@@ -8,8 +8,22 @@ the main purpose of this project is to utilize the fundamental skills in Excel t
 * Create visualizations to communicate findings effectively
 * Develop business recommendations from your data insights
 * Present your analysis to stakeholders
+* 
+Please note, that this README file contains documentation of my cleaning process, and my analysis and recommendations.
 
-All documentat
+## How to navigate the file: 
+|Sheet_Name |   Explanation     |
+|-----------|-------------------|
+|Documentation|Sheet contains more detailed cleaning process of original data|
+|car_sales| Original Data from Upright| 
+|pivot_car_sales| pivot table based on car_sales, used to identify duplicate rows| 
+|data_cleaned| A copy of car_sales that has its data cleaned for analysis|
+|pivot_tbl_cleaned| pivot table used based on data_cleaned|
+| pivot_tables_analysis| tables I created from a pivot table, Think of it as a placeholder| 
+|data_visuals| Sheet diedicated to storing data visuals|
+|vehicle_price_mileage| Sheet solely dedicated to creating a combincation chart|
+
+
 
 ## Prerequisites
 * Excel Online or Excel
@@ -226,12 +240,12 @@ Yes,
   surge.
 * Introduce performance-basd incentives for region and season.
 
-  ### Key TakeAway:
-  1. Invest more on SUVs since they are the best selling vehicle category
-  2. Exploit Quarter 4 season the highest sales period
-  3. Keep premium pricing for high end supports since demand supports it
-  4. Cut losses on vans
-  5. Allocate resources to western region during peak months.
+### Key Take Aways:
+1. Invest more on SUVs since they are the best selling vehicle category
+2. Exploit Quarter 4 season the highest sales period
+3. Keep premium pricing for high end supports since demand supports it
+4. Cut losses on vans
+5. Allocate resources to western region during peak months.
 
 
 
