@@ -11,7 +11,7 @@ FROM songs
 WHERE strftime('%Y',release_date) = '2022' 
 ORDER BY release_date DESC;
 
-2.Filtering: Find all songs with popularity score > 80 and a duration less than 240 seconds
+-- 2.Filtering: Find all songs with popularity score > 80 and a duration less than 240 seconds
 
 SELECT 
     title AS 'Song Title',
