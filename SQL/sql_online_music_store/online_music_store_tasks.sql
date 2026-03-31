@@ -85,6 +85,21 @@ FROM songs
 WHERE popularity_score > 90
 ORDER BY popularity_score DESC;
 
+/* 
+For tasks 1-3, how could you combine them into a single,
+more complex query that finds popular short songs by artists whose names start with "The"?
+*/ 
+SELECT 
+    a.artist_name AS 'Artist',
+    s.title AS 'Song Title',
+    s.popularity_score AS 'Popularity Score',
+    s.duration_seconds AS 'Song Duration in Seconds'
+FROM artists AS a
+JOIN songs AS s ON a.artist_id = s.artist_id
+WHERE 
+    a.artist_name LIKE ('The%') 
+    AND s.popularity_score > 80
+ORDER BY s.popularity_score DESC, s.duration_seconds DESC;
 
     
     
