@@ -29,6 +29,31 @@ The database consists of four main tables:
 9. **Popularity Ranking**: Identify the songs with the highest popularity scores (above 90).
 10. **Combined Query**: Popular short songs by artists starting with "The"
 
+### Discussion Questions 
+1.	In our database design, we separated purchases and streams into different tables. What are the benefits of this approach versus having a single "user_interactions" table?
+
+2.	Based on the provided data model, what business questions could music executives answer using SQL queries that we haven't covered in our exercise?
+
+
+3.	How would you extend this schema to track more detailed user behavior, such as when users skip songs or how much of a song they listen to before skipping?
+
+
+4.	For tasks 1-3, how could you combine them into a single, more complex query that finds popular short songs by artists whose names start with "The"?
+   ```sql
+   SELECT 
+    a.artist_name AS 'Artist',
+    s.title AS 'Song Title',
+    s.popularity_score AS 'Popularity Score',
+    s.duration_seconds AS 'Song Duration in Seconds'
+FROM artists AS a
+JOIN songs AS s ON a.artist_id = s.artist_id
+WHERE 
+    a.artist_name LIKE ('The%') 
+    AND s.popularity_score > 80
+ORDER BY s.popularity_score DESC, s.duration_seconds DESC;
+ ```
+  	
+
 ## 🛠️ Setup Instructions
 
 ### Prerequisites
