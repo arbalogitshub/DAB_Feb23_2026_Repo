@@ -38,7 +38,7 @@ This repository contains the tools and skills I learned during my Data Analytics
 ## Assignments
 
 ### **SQL Assignments**
-- *Coming soon*
+- [SQL Online Music Store](SQL/sql_online_music_store)
 
 ### **Python Assignments**
 - [Introduction to Python - Practice Exercise](Python/Assignments/Python_Assignment_1.ipynb)
@@ -48,7 +48,7 @@ This repository contains the tools and skills I learned during my Data Analytics
 - [Python Data Analytics Workshop](Python/Assignments/week2_python_data_analytics_workshop.ipynb)
 
 ### **Excel Assignments**
-- *Coming soon*
+- [Analyzing Sales and Making Business Recommendations with Excel](Excel/analyzing-sales-data-workshop)
 
 ### **Tableau Assignments**
 - *Coming soon*
