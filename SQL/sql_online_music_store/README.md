@@ -117,7 +117,7 @@ GROUP BY time_of_day
 ORDER BY Count(*) DESC
  ```
 
-5.	How would you extend this schema to track more detailed user behavior, such as when users skip songs or how much of a song they listen to before skipping?
+Question 3: How would you extend this schema to track more detailed user behavior, such as when users skip songs or how much of a song they listen to before skipping?
 I would consider in creating a another table, streams_detailed_interactions where we could have columns such the following:
 
 - interaction_id (INTEGER PRIMARY KEY),
