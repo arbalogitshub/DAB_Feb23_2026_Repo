@@ -39,6 +39,7 @@ This repository contains the tools and skills I learned during my Data Analytics
 
 ### **SQL Assignments**
 - [SQL Online Music Store](SQL/sql_online_music_store)
+- [SQL_Public_Library_Management](SQL/public_library_management)
 
 ### **Python Assignments**
 - [Introduction to Python - Practice Exercise](Python/Assignments/Python_Assignment_1.ipynb)
