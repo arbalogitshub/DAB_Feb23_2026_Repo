@@ -52,8 +52,51 @@ Besides adding the new table we can make modifications to the other tables:
 
 **Question 2)** Based on the provided data model, what business questions could library administrators answer using SQL queries that we haven't covered in our exercise?
 
-
-
+What's the most popular genre for each city
+```sql
+WITH rank_genre AS (
+  SELECT 
+    p.city AS city,
+    g.genre_name AS genre,
+    COUNT(l.loan_id) as loans_count,
+    RANK() OVER (PARTITION BY p.city ORDER BY COUNT(l.loan_id) DESC) as genre_rank
+  FROM Loans l
+  JOIN Patrons p ON l.patron_id = p.patron_id
+  JOIN Books b ON l.book_id = b.book_id
+  JOIN Genres g ON b.genre_id = g.genre_id
+  GROUP BY p.city, g.genre_name
+)
+SELECT * 
+FROM rank_genre
+HAVING genre_rank <= 3
+ORDER BY city, genre, genre_rank
+```
+Who are the top 10 most active patrons by branch 
+```sql
+-- Who are the top 10 most active patrons by branch
+SELECT br.branch_name,
+       p.first_name || ' ' || p.last_name as patron_name,
+       COUNT(l.loan_id) as total_loans
+FROM Patrons p
+INNER JOIN Branches br 
+    ON p.branch_id = br.branch_id
+INNER JOIN Loans l 
+    ON p.patron_id = l.patron_id
+GROUP BY br.branch_name, p.patron_id
+ORDER BY br.branch_name, total_loans DESC
+LIMIT 10;
+```
+What's the average loan duration (in days) by genre
+```sql
+SELECT g.genre_name,
+       ROUND(AVG(JULIANDAY(l.return_date) - JULIANDAY(l.checkout_date)),2) as avg_loan_days
+FROM Loans l
+JOIN Books b ON l.book_id = b.book_id
+JOIN Genres g ON b.genre_id = g.genre_id
+WHERE l.return_date IS NOT NULL
+GROUP BY g.genre_name
+ORDER BY avg_loan_days DESC;
+```
 **Question 3)** How would you extend this schema to track additional patron interactions, such as reserved books, late fees, or participation in library programs?
 - Create a new table called reservations with the following information:
     - reservation_id int PRIMARY KEY,
