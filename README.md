@@ -54,5 +54,8 @@ This repository contains the tools and skills I learned during my Data Analytics
 ### **Tableau Assignments**
 - *Coming soon*
 
+## Mid-term Data Analytics Project:
+- *Coming soon*
+  
 ## Final Project
 - *Coming soon*
