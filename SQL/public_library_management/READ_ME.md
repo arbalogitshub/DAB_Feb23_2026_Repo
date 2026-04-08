@@ -5,8 +5,8 @@ A comprehensive SQL analysis project for a public library system, demonstrating 
 ## Background
 You've been hired as a data analyst for a public library system. The city's library network has multiple branches and serves thousands of patrons who borrow books regularly. The library director wants to better understand patron behavior, optimize the book collection, and improve services across all branches. Your task is to use SQL queries to extract meaningful insights from their database.
 
-## 📋 Database Schema
 
+## 📋 Database Schema
 The database consists of six tables:
 - **branches**: Library Branch details (branch_id, branch_name, address, city, phone)
 - **patrons**: Contains patron information (patron_id, first_name, last_name, email, address, city, registration_date, branch_id)
@@ -14,6 +14,26 @@ The database consists of six tables:
 - **authors**: Author information (author_id, first_name, last_name, birth_year, country)
 - **books**: Book information (book_id, title, author_id, genre_id, isbn, publication_year, copies_owned)
 - **loans**: Book loan information (loan_id, book_id, patron_id, branch_id, checkout_date, due_date, return_date)
+
+## 📑 File Navigation
+- [Part 1: Basic SQL Operations and JOIN Queries](#part-1-basic-sql-operations-and-join-queries)
+- [Part 2: Aggregation and GROUP BY Operations](#part-2-aggregation-and-group-by-operations)
+- [Discussion Questions](#discussion-questions)
+  - [Question 1: Schema Modification for Inventory](#question-1)
+  - [Question 2: Additional Business Questions](#question-2)
+  - [Question 3: Extended Schema for Patron Interactions](#question-3)
+  - [Question 4: Combined Complex Query](#question-4)
+  - [Question 5: Performance Considerations](#question-5)
+
+ 
+ ## Repo Structure
+| File | Description |
+|------|-------------|
+| `library_management_tasks.sql` | All SQL tasks for this assignment also includes queries developed for 2nd question in Discussion section|
+| `library_database_tables` | CREATE TABLE statements for the library database |
+| `READ_ME` | Comprehensive answers to all 5 discussion questions |
+| `/library_management_data/` | Exported query results in CSV format for analysis |
+| `/diagrams/` | Visual database schema representations |
 
 ## 🚀 Queries Included
 
