@@ -1,0 +1,115 @@
+## SQL Public Library Management Discussion Questions
+**Question 1)** In our library database, we track which branch a book was borrowed from, but books can exist at multiple branches. How would you modify the schema to track the actual inventory at each branch?
+
+We can create either a new table called inventory where we could have information such as the following:
+- copy_id: A unique serial number dedicated to the individual copy of a book. This can be served as our primary key
+- book_id: This is the id number for a book (not an indivisual copy of a book) This can serve as the FOREIGN KEY to the books table.
+- branch_id: This tells us which branch has this individual copy this could serve as our FOREIGN KEY to the branches table.
+- status: status of a specific copy statuses such as the following:
+  - 'Available' - Book is able to be checked out.
+  - 'Loaned' - Books is loaned out.
+  - 'Replacement Required' - Book is severely damaged or lost. 
+
+Besides adding the new table we can make modifications to the other tables: 
+- Books Table
+  - Remove copies_owned from table
+- Loans Table
+  - Remove book_id from loans table, replace it with copy_id (FOREIGN KEY to inventory)
+
+**Question 2)** Based on the provided data model, what business questions could library administrators answer using SQL queries that we haven't covered in our exercise?
+
+What's the most popular genre for each city
+```sql
+WITH rank_genre AS (
+  SELECT 
+    p.city AS city,
+    g.genre_name AS genre,
+    COUNT(l.loan_id) as loans_count,
+    RANK() OVER (PARTITION BY p.city ORDER BY COUNT(l.loan_id) DESC) as genre_rank
+  FROM Loans l
+  JOIN Patrons p ON l.patron_id = p.patron_id
+  JOIN Books b ON l.book_id = b.book_id
+  JOIN Genres g ON b.genre_id = g.genre_id
+  GROUP BY p.city, g.genre_name
+)
+SELECT * 
+FROM rank_genre
+HAVING genre_rank <= 3
+ORDER BY city, genre, genre_rank
+```
+Who are the top 10 most active patrons by branch 
+```sql
+-- Who are the top 10 most active patrons by branch
+SELECT br.branch_name,
+       p.first_name || ' ' || p.last_name as patron_name,
+       COUNT(l.loan_id) as total_loans
+FROM Patrons p
+INNER JOIN Branches br 
+    ON p.branch_id = br.branch_id
+INNER JOIN Loans l 
+    ON p.patron_id = l.patron_id
+GROUP BY br.branch_name, p.patron_id
+ORDER BY br.branch_name, total_loans DESC
+LIMIT 10;
+```
+What's the average loan duration (in days) by genre
+```sql
+SELECT g.genre_name,
+       ROUND(AVG(JULIANDAY(l.return_date) - JULIANDAY(l.checkout_date)),2) as avg_loan_days
+FROM Loans l
+JOIN Books b ON l.book_id = b.book_id
+JOIN Genres g ON b.genre_id = g.genre_id
+WHERE l.return_date IS NOT NULL
+GROUP BY g.genre_name
+ORDER BY avg_loan_days DESC;
+```
+**Question 3)** How would you extend this schema to track additional patron interactions, such as reserved books, late fees, or participation in library programs?
+- Create a new table called reservations with the following information:
+    - reservation_id int PRIMARY KEY,
+    - patron_id, FOREIGN KEY to patrons table 
+    - loan_id int FOREIGN KEY to loans table 
+    - book_id int FOREIGN KEY to books table 
+    - reserve_date TEXT (YYYY-MM-DD format): date of when book was reserved
+    - expire_date TEXT (YYYY-MM-DD format): data of when reservation expires
+- Create new table called fees which is about fee information like how much, why fee, fee payment status
+  - fee_id integer primary key
+  - loan_id integer foreign key to loans(loan_id)
+  - patron_id integer foreing key to patrons (patron)
+  - fee_amount decimal(10,2) : cost of fee to pay
+  - fee_date TEXT (YYYY-MM-DD format): date of when fee has been charged
+  - fee_status VARCHAR(55): textr value default 'unpaid'
+  - fee_reason TEXT: reason for fee
+- Create another table called payments. Information about the payments:
+  - payment_id int PRIMARY KEY,
+  - patron_id int FOREIGN KEY REFERENCES patrons (patron_id)
+  - fee_id int FOREIGN KEY REFERENCES fees (fee_id)
+  - amount decimal(10,2)
+  - payment_date TEXT (YYYY-MM-DD format): Date of when fee was paid
+  - payment_method VARCHAR(25) (cash, credit, check, debit)
+  - reciept_number VARCHAR(25)
+  - notes TEXT
+ 
+  - Create another table called programs, 
+
+**Question 4)** For tasks 1-3, how could you combine them into a single, more complex query that finds recent history books with multiple copies?
+
+```sql
+-- Discussion Question 4) Combine tasks 1-3 
+
+-- All titles, published years after 2000 order by publication year newewst to oldest
+-- Books with more than 5 copies owned in fiction genre_id = 1
+-- All books with the word 'History' in title
+SELECT 
+    title,
+    publication_year,
+    copies_owned
+FROM books 
+WHERE 
+     title LIKE ('%History%') 
+     AND publication_year > 2000
+     AND copies_owned > 5;
+```
+
+**Question 5)** What performance considerations should be kept in mind when running complex joins and aggregations on large library datasets?
+- Select only the required columns, utilize proper JOIN types and filter the data appropiately
+- Loans table should be broken down to multiple tables, each table dedicated to loans that occurred in a specific year. This is speed up time based queries because teh database will only scan loans that occur in a specific year.
