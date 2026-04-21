@@ -1,4 +1,4 @@
-# 📊 Data Analytics Midterm Project: Audible Audiobooks Insights
+# 📊 Turning Dirty Data into Business Insights: A Café Sales Analysis
 One-line description of the business problem and goal
 
 ## 📌 Overview 
@@ -9,9 +9,9 @@ The analysis follows a full workflow from raw data to insights, including data e
 ## 🎯 Objectives 
 
 ## 📂 Dataset
-* Source: [Audible Dataset](https://www.kaggle.com/datasets/snehangsude/audible-dataset?select=audible_uncleaned.csv)
+* Source: [Cafe Sales Dataset](https://www.kaggle.com/datasets/ahmedmohamed2003/cafe-sales-dirty-data-for-cleaning-training)
 * Source Format: CSV
-* Size:
+* Size: 10,000 rows, 8 columns
 
 📖 More details: docs/data-exploration.md
 
