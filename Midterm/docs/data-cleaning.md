@@ -7,13 +7,14 @@ Explain what cleaning was required and why.
 
 ## 🔄 Cleaning Steps
 
-### 1. Removing Duplicates
+### 1. Removing Duplicate
 - Method used:
 - Number of duplicates removed:
 
 ---
 
 ### 2. Handling Missing Values
+- To view missing data values, please review data-exploration.md 
 - Columns affected:
 - Strategy used (drop, fill, impute):
 
