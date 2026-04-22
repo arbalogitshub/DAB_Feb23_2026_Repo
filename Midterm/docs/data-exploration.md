@@ -1,4 +1,4 @@
-# 📊 Data Exploration Report
+# 📊 Data Exploration Report (Pre Cleaning) 
 
 ## 📌 Objective
 Explore café sales data to understand structure, quality issues, and initial patterns.
@@ -17,11 +17,11 @@ Explore café sales data to understand structure, quality issues, and initial pa
 ---
 
 ## 🧾 Column Descriptions
-⚠️Original column names in Kaggle dataset have been altered/renamed 
+⚠️Original column names in Kaggle dataset have been altered/renamed for this project. 
 [Kaggle Cafe Sales Column Description Source](https://www.kaggle.com/datasets/ahmedmohamed2003/cafe-sales-dirty-data-for-cleaning-training)
 
 <b> Cafe Sales Columns Details</b>
-
+<img width="1579" height="265" alt="image" src="https://github.com/user-attachments/assets/3afa0aee-834c-4735-b403-10da7a2d10f8" />
 
 
 ---
@@ -40,16 +40,16 @@ Explore café sales data to understand structure, quality issues, and initial pa
    - Use total missing value or invalid data counts divided by total row count to obtain missing data percentage: =A$10010/10000 
     
 ### 🔍 Missing Value or Invalid Value Results 
-  |Column Name | Count of Missing or Invalid Data| Percentage of Missing or Invalid Data|
+  |Renamed Column | Count of Missing or Invalid Data| Percentage of Missing or Invalid Data|
   |------------|----------------------|---------------------------|
-  | Transaction ID | 0 | 0%|
-  |  Item | 969 | 9.69% |
-  |  Quantity | 479 | 4.79% |
-  |  Price per Unit | 533| 5.33%|
-  | Total Spent | 502 | 5.01%|
-  | Payment Method | 3178 | 31.78%|
-  | Location | 3961 | 39.61%|
-  | Date | 460 | 4.60%|
+  | transaction_id | 0 | 0%|
+  | item | 969 | 9.69% |
+  |  quantity_purchased| 479 | 4.79% |
+  |  price_per_unit | 533| 5.33%|
+  | total_cost | 502 | 5.01%|
+  | payment_method | 3178 | 31.78%|
+  | location| 3961 | 39.61%|
+  | transaction_date | 460 | 4.60%|
 
 ### 🔍 Reviewing Menu Items and their Prices 
 - Our cafe sales contains items sold and the price per item.  
@@ -69,7 +69,7 @@ Explore café sales data to understand structure, quality issues, and initial pa
   <br>*Prices written in the menu table will just appear as a decimal in the csv file.*
 ---
 
-## 📊 Basic Statistics
+## 📊 Basic Exploration (Pre-Cleaning) 
 - Pivot Table Value Counts for Categorical Columns:
 - Item column value counts:
   | Item | Value Counts|
@@ -105,13 +105,7 @@ Explore café sales data to understand structure, quality issues, and initial pa
 
 ---
 
-## 📈 Raw Data Early Insights
-- Juice is most ordered menu item in data, while Tea was the least ordered item.
-- Most transactions occured with Takeaway
-- Digital Wallet is the most popular form of payment.
-- No duplicated 
-- Observation 2
-- Observation 3
+
 
 ---
 
@@ -119,8 +113,13 @@ Explore café sales data to understand structure, quality issues, and initial pa
 - Missing Values: Multiple colummns contained blanks.
 - Invalid Entries: Multiple columns contained values such "ERROR", "UNKNOWN". They were counted as Missing Values in this case.
 - Price consistency: Prices for menu are consistent but may have missing values or invalid values.
+
+## Plan to 
 ---
 
+---
+
+#  📊 Data Exploration  (Post-Cleaning) 
 ## 🧠 Notes
 - Need to reformat and rename columns.
-- For sake of consistency 
+- Initially renamed columns to make 
