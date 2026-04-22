@@ -8,7 +8,6 @@ Explore café sales data to understand structure, quality issues, and initial pa
 ## 📂 Dataset Overview
 - Rows: 10,000
 - Columns: 8
-
 - File format:CSV
 - Original Source:
 - Source File Name: "dirty_cafe_sales.csv"
@@ -17,7 +16,7 @@ Explore café sales data to understand structure, quality issues, and initial pa
 ---
 
 ## 🧾 Column Descriptions
-⚠️Original column names in Kaggle dataset have been altered/renamed for this project. 
+⚠️ Original column names in Kaggle dataset have been altered/renamed for this project. Renamed columns will be referenced from here on out.
 [Kaggle Cafe Sales Column Description Source](https://www.kaggle.com/datasets/ahmedmohamed2003/cafe-sales-dirty-data-for-cleaning-training)
 
 <b> Cafe Sales Columns Details</b>
@@ -27,29 +26,43 @@ Explore café sales data to understand structure, quality issues, and initial pa
 ---
 
 ## 🔍 Initial Observations
+- Shape: 10K rows, 8 columns 
+- Data contains missing values (blanks) and invalid entries ("ERROR") and unknown entries ("UNKNOWN)
+   - Blanks are the true missing data since there is no value.
+   - "ERROR" is treated as invalid entry due to the transaction logging system.
+   - "UNKNOWN" is treated as a data value is well unknown; however, depending on other columns, there is a possiblity, we could figure out the unknown data value.
 
-### 🧮 Missing Values and Invalid Entries Calculation Method
-- Data Missing in Cafe Sales were identifed as blanks, "ERROR" or "UNKNOWN". Invalid Entries are counted as missing values in this scenario.
-- Total row count = 10,000
+### 🧮 Identifying Missing Data Methods
+- I will only consider only considering blanks as missing data.
 - In Excel, The following formulas were applied to each column.
-   - To Count Blanks : =COUNTBLANK(A$2:A$10001) Counts Blanks
+   - To Count Blanks : = COUNTBLANK(A$2:A$10001)
+   - To Count Non-Blank Data: = COUNTA($A$2:$A$10001)
+      - ⚠️ Non-Blank Data Count includes values with "ERROR" or "UNKNOWN"
+   - To obtain Percentages of Non-Missing Data: Count Non-Blanks / Total Row Count
+   - To obtain Percentages ofMissing Data: Count Blanks / Total Row Count
+
+### 🔍 Missing Value Identification Results 		
+<img width="954" height="265" alt="image" src="https://github.com/user-attachments/assets/a06c2a1f-0004-4a0a-98af-8a7a21fa508e" />
+
+
+### Identifying Invalid and Unknown Data. 
+
+### 🧮 Identifying Invalid and Unknown Data Methods
+- "ERROR" AND "UNKNOWN" are considered to be invalid or unknown data.
+- In Excel, The following formulas were applied to each column.
    - To count "ERROR" values: = COUNTIFS(A$2:A$10001,"ERROR") 
    - To count "UNKNOWN" values: = COUNTIFS(A$2:A$10001,"UNKNOWN")
-   - Utilize values from the previous formulas and create a sum of values = SUM(A$10004,A$10006,A$10008) 
-   - Use total row count and subtract from sum to obtain non-missing valid values count = 10000- A$10010 
-   - Use total missing value or invalid data counts divided by total row count to obtain missing data percentage: =A$10010/10000 
-    
-### 🔍 Missing Value or Invalid Value Results 
-  |Renamed Column | Count of Missing or Invalid Data| Percentage of Missing or Invalid Data|
-  |------------|----------------------|---------------------------|
-  | transaction_id | 0 | 0%|
-  | item | 969 | 9.69% |
-  |  quantity_purchased| 479 | 4.79% |
-  |  price_per_unit | 533| 5.33%|
-  | total_cost | 502 | 5.01%|
-  | payment_method | 3178 | 31.78%|
-  | location| 3961 | 39.61%|
-  | transaction_date | 460 | 4.60%|
+   - To obtain Percentages of ERROR values : Count ERROR values / Count of Non-Missing Data
+   - To obtain Percentages of UNKNOWN values : Count UNKNOWN values / Count of Non-Missing Data
+
+### 🔍 Invalid and Unknown Data Results
+- ⚠️ Non-Missing Data Counts exclude blanks.
+- ⚠️ Valid Data Counts does not include counts of ERROR or UNKNOWN values.
+- ⚠️ Valid Data Percent does not include proportion of ERROR or UNKNOWN values.
+- ⚠️ Proportions were caluclated with only non-missing data.
+<img width="793" height="697" alt="image" src="https://github.com/user-attachments/assets/96e26dbd-d935-468a-9d69-112fad8d8efd" />
+
+
 
 ### 🔍 Reviewing Menu Items and their Prices 
 - Our cafe sales contains items sold and the price per item.  
@@ -113,10 +126,10 @@ Explore café sales data to understand structure, quality issues, and initial pa
 - Missing Values: Multiple colummns contained blanks.
 - Invalid Entries: Multiple columns contained values such "ERROR", "UNKNOWN". They were counted as Missing Values in this case.
 - Price consistency: Prices for menu are consistent but may have missing values or invalid values.
+- Date Formatting: transaction_date we need to make sure that transaction_date is in DATE data type, and reformat that column.
 
-## Plan to 
----
-
+## Data Cleaning Plan 
+- For Full details please review data-cleaning.md
 ---
 
 #  📊 Data Exploration  (Post-Cleaning) 
