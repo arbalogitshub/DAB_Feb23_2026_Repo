@@ -17,10 +17,11 @@ Explore café sales data to understand structure, quality issues, and initial pa
 ---
 
 ## 🧾 Column Descriptions
+⚠️Original column names in Kaggle dataset have been altered/renamed 
 [Kaggle Cafe Sales Column Description Source](https://www.kaggle.com/datasets/ahmedmohamed2003/cafe-sales-dirty-data-for-cleaning-training)
 
 <b> Cafe Sales Columns Details</b>
-<img width="1417" height="265" alt="image" src="https://github.com/user-attachments/assets/ee6f3c3c-dcb0-47a9-a2cc-b78c04043200" />
+
 
 
 ---
@@ -65,20 +66,50 @@ Explore café sales data to understand structure, quality issues, and initial pa
   |Salad| $5.00|
 
   Menu Items and Prices Source: [Kaggle Cafe Sales](https://www.kaggle.com/datasets/ahmedmohamed2003/cafe-sales-dirty-data-for-cleaning-training/code)
-  *Prices written in the menu table will just appear as a decimal in the csv file.*
-  
-
+  <br>*Prices written in the menu table will just appear as a decimal in the csv file.*
 ---
 
 ## 📊 Basic Statistics
-- Summary statistics (mean, median, etc.)
-- Key distributions
-- Value counts for categorical variables
+- Pivot Table Value Counts for Categorical Columns:
+- Item column value counts:
+  | Item | Value Counts|
+  |------------|----------------------|
+  |Juice| 1171|
+  |Coffee| 1165|
+  |Salad| 1148|
+  |Cake| 1139|
+  |Sandwhich| 1131|
+  |Smoothie| 1096|
+  |Cookie| 1092|
+  |Tea| 1089|
+  |UNKNOWN|344|
+  |ERROR|292|
+  |blanks| 333|
+- Payment_Method column value counts:
+  | Payment_Method | Value Counts|
+  |------------|----------------------|
+  |Digital Wallet| 2291|
+  |Credit Card| 2273|
+  |Cash| 2258|
+  |ERROR| 306|
+  |UNKNOWN| 293|
+  |blanks| 2579|
+- Location column value counts:
+  | Item | Value Counts|
+  |------------|----------------------|
+  |Takeaway| 3022|
+  |In-store| 3017|
+  |ERROR| 358|
+  |UNKNOWN| 338|
+  |blanks|3265|
 
 ---
 
-## 📈 Early Insights
-- Observation 1
+## 📈 Raw Data Early Insights
+- Juice is most ordered menu item in data, while Tea was the least ordered item.
+- Most transactions occured with Takeaway
+- Digital Wallet is the most popular form of payment.
+- No duplicated 
 - Observation 2
 - Observation 3
 
@@ -91,5 +122,5 @@ Explore café sales data to understand structure, quality issues, and initial pa
 ---
 
 ## 🧠 Notes
-Any additional thoughts before cleaning.
-
+- Need to reformat and rename columns.
+- For sake of consistency 
