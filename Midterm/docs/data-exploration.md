@@ -39,7 +39,7 @@ Explore café sales data to understand structure, quality issues, and initial pa
    - Use total missing value or invalid data counts divided by total row count to obtain missing data percentage: =A$10010/10000 
     
 ### 🔍 Missing Value or Invalid Value Results 
-  |Column Name | Count of Missing Data| Percentage of Missing Data|
+  |Column Name | Count of Missing or Invalid Data| Percentage of Missing or Invalid Data|
   |------------|----------------------|---------------------------|
   | Transaction ID | 0 | 0%|
   |  Item | 969 | 9.69% |
