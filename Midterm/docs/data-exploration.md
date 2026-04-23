@@ -133,6 +133,13 @@ Explore café sales data to understand structure, quality issues, and initial pa
 ---
 
 #  📊 Data Exploration  (Post-Cleaning) 
+
+## 🧾 Updated Column Descriptions
+
+<img width="1975" height="541" alt="image" src="https://github.com/user-attachments/assets/b254cc44-76c3-4124-b5f2-a5c0b64f18de" />
+
+
+
 ## 🧠 Notes
 - Need to reformat and rename columns.
 - Initially renamed columns to make 
