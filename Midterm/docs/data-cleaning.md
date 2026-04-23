@@ -18,7 +18,7 @@ Explain what cleaning was required and why.
 ### 1. Rename Columns 
 - Replaced spaces with "_".
 - All column names are now lowercase in dataset.
-- A few columns were renamed to avoid confusion example: "Total Price" renamed to "total_cost" and "Quantity" to "quantity_purchased"
+- A few columns were renamed to avoid confusion example: "Total price_per_unit" renamed to "total_cost" and "Quantity" to "quantity_purchased"
 ---
 
 ### 2. Removing Duplicate
@@ -47,20 +47,21 @@ Explain what cleaning was required and why.
   - **`payment_method`**  
     31.78% (n = 3,178) of values were missing or invalid. Because no supporting data could accurately infer the correct category, missing values were labeled as `"Unknown"`.
 
-  - **`item`**  
-    Missing values were first cross-referenced with a secondary menu worksheet using `price` as a key:  
+  - **`item`**
+    31.78% (n = 3,178) of values were missing or invalid. 
+    Missing values were first cross-referenced with a secondary menu worksheet using `price_per_unit` as a key:  
     `=IF(ISBLANK(B2), IFERROR(INDEX(menu!A:A, MATCH(F2, menu!B:B, 0)), ""), B2)`  
 
     For remaining blanks:  
-    - If `price_per_unit = $3`, values were labeled `"Cake or Juice"`  
-    - If `price_per_unit = $4`, values were labeled `"Sandwich or Smoothie"`  
+    - If `price_per_unit_per_unit = $3`, values were labeled `"Cake or Juice"`  
+    - If `price_per_unit_per_unit = $4`, values were labeled `"Sandwich or Smoothie"`  
 
-    This approach uses `price` as a proxy to group possible items rather than assigning a single specific item, helping reduce the risk of incorrect assumptions.  
+    This approach uses `price_per_unit` as a proxy to group possible items rather than assigning a single specific item, helping reduce the risk of incorrect assumptions.  
 
-    If both `price` and related fields (`quantity_purchased`, `total_cost`) were missing, the item was labeled as `"Unknown"`.
+    If both `price_per_unit` and related fields (`quantity_purchased`, `total_cost`) were missing, the item was labeled as `"Unknown"`.
  
  ##### Missing Numeric Data Methods
-- **Columns affected**: `price_per_unit`, `quantity_purchased`, `total_cost`
+- **Columns affected**: `price_per_unit_per_unit`, `quantity_purchased`, `total_cost`
 
 - **Initial cleaning step**:  
   Replaced `"ERROR"` and `"UNKNOWN"` entries with blanks to standardize missing values.  
@@ -84,7 +85,7 @@ Explain what cleaning was required and why.
 - **Text categories**: `item`, `item_type`, `payment_method`, `location`, `transaction_weekday`, `transaction_month`
   - All text values in these categories are converted to title format (first letter capitalized, remaining letters until a space are lowercase).
 
-- **Numeric conversions**: `price_per_unit`, `total_cost`
+- **Numeric conversions**: `price_per_unit_per_unit`, `total_cost`
   - Numeric format is `#.##` (two decimal places).
   
 ---
