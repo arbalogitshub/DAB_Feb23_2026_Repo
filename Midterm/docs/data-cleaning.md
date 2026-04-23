@@ -53,24 +53,38 @@ Explain what cleaning was required and why.
     `=IF(ISBLANK(B2), IFERROR(INDEX(menu!A:A, MATCH(F2, menu!B:B, 0)), ""), B2)`  
 
     For remaining blanks:  
-    - If `price_per_unit_per_unit = $3`, values were labeled `"Cake or Juice"`  
-    - If `price_per_unit_per_unit = $4`, values were labeled `"Sandwich or Smoothie"`  
+    - If `price_per_unit = $3`, values were labeled `"Cake or Juice"`  
+    - If `price_per_unit = $4`, values were labeled `"Sandwich or Smoothie"`  
 
     This approach uses `price_per_unit` as a proxy to group possible items rather than assigning a single specific item, helping reduce the risk of incorrect assumptions.  
 
-    If both `price_per_unit` and related fields (`quantity_purchased`, `total_cost`) were missing, the item was labeled as `"Unknown"`.
+    If both `price_per_unit` and related fields (`quantity_purchased`, `total_cost`) were still missing, the item was labeled as `"Unknown"`.
  
  ##### Missing Numeric Data Methods
 - **Columns affected**: `price_per_unit_per_unit`, `quantity_purchased`, `total_cost`
-
+- **Assumptions**:
+  Blanks in numeric data columns does not = 0 and will not be replaced by 0.
 - **Initial cleaning step**:  
   Replaced `"ERROR"` and `"UNKNOWN"` entries with blanks to standardize missing values.  
   *(Note: formula used — `=IF(ISBLANK(A1), NULL, A1)`)*
 
 - **Imputation strategies**:
 
-  - 
+  -  **`price_per_unit`**
+    3.33% (n = 333) of values were missing or invalid. 
+    Missing values were first cross-referenced with a secondary menu worksheet using `item` as a key:  
+    `=IF(ISBLANK(F2), IFERROR(INDEX(menu2!A:A, MATCH(F2, menu!B:B, 0)), ""), F2)`
 
+    For remaining blanks:  
+    - If `price_per_unit` could not be determined due to `quantity_purchased` , `total_cost` , `item`, `price_per_unit` being blank, then `price_per_unit` was left blank. 
+    - If `price_per_unit_per_unit`, can be determined, then filled in we imputed based on the other columns: `quantity_purchased` , `total_cost` , `item`
+    - If `item` is `"Unknown"` and `quantity_purchased` , `total_cost` were left missing, then `price_per_unit` was left blank.
+
+ -  **`quantity_purchased`** 
+     
+  
+ 
+  
 
 
 
