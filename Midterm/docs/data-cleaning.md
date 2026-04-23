@@ -12,7 +12,6 @@ Explain what cleaning was required and why.
 - Identified Duplicated Rows (None were found).
 
 
-
 ## 🔄 Cleaning Steps
 
 ### 1. Rename Columns 
@@ -47,8 +46,8 @@ Explain what cleaning was required and why.
   - **`payment_method`**  
     31.78% (n = 3,178) of values were missing or invalid. Because no supporting data could accurately infer the correct category, missing values were labeled as `"Unknown"`.
 
-  - **`item`**
-    31.78% (n = 3,178) of values were missing or invalid. 
+  - **`item`**<br>
+  31.78% (n = 3,178) of values were missing or invalid. 
     Missing values were first cross-referenced with a secondary menu worksheet using `price_per_unit` as a key:  
     `=IF(ISBLANK(B2), IFERROR(INDEX(menu!A:A, MATCH(F2, menu!B:B, 0)), ""), B2)`  
 
@@ -80,15 +79,31 @@ Explain what cleaning was required and why.
     - If `price_per_unit_per_unit`, can be determined, then filled in we imputed based on the other columns: `quantity_purchased` , `total_cost` , `item`
     - If `item` is `"Unknown"` and `quantity_purchased` , `total_cost` were left missing, then `price_per_unit` was left blank.
 
- -  **`quantity_purchased`** 
-     
+ -  **`quantity_purchased`**<br>
+   4.79% (n = 479) of data was missing or invalid.
+   Missing values were first filled in if I knew the values found in `total_cost` and `price_per_unit`.  I then did `total_cost/price_per_unit` to obtain `quantity_purchased`.
+
+ For remaining blanks: 
+ - For any reason `quantity_purchased` remained blank if `total_cost` and `price_per_unit` were also blank.
   
- 
+ -  **`total_cost`**<br>
+  5.02% (n = 502) of data was missing or invalid.
+   Missing values were first filled in if I knew the values found in `quantity_purchased` and `price_per_unit`.  I then did `total_cost * price_per_unit` to obtain `quantity_purchased`.
+
+ For remaining blanks: 
+ - For any reason `quantity_purchased` remained blank if `total_cost` and `price_per_unit` were also blank.
   
+ ##### Missing Date Data Methods
+- **Columns affected**: `transaction_date`
+- **Assumptions**:
+  Blanks dates are left as blank dates 
+- **Initial cleaning step**:  
+  Replaced `"ERROR"` and `"UNKNOWN"` entries with blanks to standardize missing values.  
+  *(Note: formula used — `=IF(ISBLANK(A1), NULL, A1)`)*
 
-
-
-
+**Imputation strategies**:
+  - **`transaction_date`**  
+    4.6% (n = 460) of values were missing or invalid. Since no other columns provided information to help us deduce the missing date, I made the choice of leaving transaction_date blank
 ---
 
 ### 4. Standardizing Formats
@@ -106,28 +121,37 @@ Explain what cleaning was required and why.
 
 ### 5. Feature Engineering
 
-<img width="989" height="241" alt="image" src="https://github.com/user-attachments/assets/0f59ddb2-a876-4189-8ecc-9b63e84a6d30" />
----
+- `missing_total_cost`: IF missing_quantity OR missing_price = 1 THEN 1 ELSE 0 
+- `missing_quantity`: `=IF(ISBLANK(J2), 1, 0)`
+- `missing_price`: `=IF(ISBLANK(J2), 1, 0)`
+- `missing_date`: `=IF(ISBLANK(J2), 1, 0)`
+- `transaction_weekday`: `=TEXT(A1, "dddd")`
+- `transaction_month`: `=TEXT(A1, "mmmm")`
+- `item_type`: `=IF(OR(A1="Cookie", A1="Sandwich", A1="Cake", A1="Salad"), "Food", IF(OR(A1="Juice", A1="Tea", A1="Coffee", A1="Smoothie"), "Drink", "Unknown"))`
 
-### 6. Outlier Handling (if applicable)
-- Method used:
-- Impact on dataset:
+`transaction_weekday` and `transaction_month` have missing data, were intentionally left blank.
+
+New Features, Value Counts, 
+<img width="708" height="385" alt="image" src="https://github.com/user-attachments/assets/7614d4ba-21c0-4f78-a299-37f7073770e7" />
 
 ---
 
 ## 📊 Final Cleaned Dataset Summary
-- Final rows:
-- Final columns:
+- Final rows: 10,0000
+- Final columns: 15
 - Key changes made:
-
-
+  - No rows eliminated.
+  - 7 new columns added to the dataset.
+    - 3 columns are new columns made for analytical purposes.
+    - 4 columns created to flag for missing data in several columns.
 ---
 
 ## ⚠️ Assumptions
-- Assumption 1
-- Assumption 2
+- columns that start with "missing%" are numeric in file but are treated like boolean values 1 = TRUE, 0 = FALSE.
+- For analytical and visual purposes, We will filter out certain rows, n counts will be changed
 
 ---
 
 ## 🧠 Notes
-Any challenges or decisions worth mentioning.
+- Next time, Create a new feature that flags missing columns first... saves a lot of time.
+- We may need to VIEW in SQL to reuse for filtering data 
