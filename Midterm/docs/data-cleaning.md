@@ -11,7 +11,6 @@ Explain what cleaning was required and why.
 - Obtain counts of unknown or invalid data ("UNKNOWN" or "ERROR").
 - Identified Duplicated Rows (None were found).
 
-
 ## 🔄 Cleaning Steps
 
 ### 1. Rename Columns 
@@ -132,7 +131,12 @@ Explain what cleaning was required and why.
 `transaction_weekday` and `transaction_month` have missing data, were intentionally left blank.
 
 New Features, Value Counts, 
-<img width="708" height="385" alt="image" src="https://github.com/user-attachments/assets/7614d4ba-21c0-4f78-a299-37f7073770e7" />
+- known_data_counts -> non-missing or data is not labeled "Unknown".
+- unknown_count -> count data that is labeled as "Unknown".
+- blanks_count -> count of data that is left blank or missing.
+- total_row_count -> total count of rows regardless of value
+
+<img width="708" height="385" alt="image" src="https://github.com/user-attachments/assets/ca417b36-772e-483b-a5ee-c183d44d2c2f" />
 
 ---
 
