@@ -118,10 +118,6 @@ Explore café sales data to understand structure, quality issues, and initial pa
 
 ---
 
-
-
----
-
 ## ⚠️ Data Quality Issues
 - Missing Values: Multiple colummns contained blanks.
 - Invalid Entries: Multiple columns contained values such "ERROR", "UNKNOWN". They were counted as Missing Values in this case.
@@ -132,14 +128,11 @@ Explore café sales data to understand structure, quality issues, and initial pa
 - For Full details please review data-cleaning.md
 ---
 
-#  📊 Data Exploration  (Post-Cleaning) 
-
-## 🧾 Updated Column Descriptions
-
-<img width="1975" height="541" alt="image" src="https://github.com/user-attachments/assets/b254cc44-76c3-4124-b5f2-a5c0b64f18de" />
-
-
-
 ## 🧠 Notes
 - Need to reformat and rename columns.
-- Initially renamed columns to make 
+- Initially renamed columns to make
+- To view Pivot Analysis 
+
+
+
+
