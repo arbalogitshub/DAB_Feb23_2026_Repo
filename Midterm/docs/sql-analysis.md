@@ -1,7 +1,7 @@
-# 🧮 SQL Analysis
+<img width="961" height="49" alt="image" src="https://github.com/user-attachments/assets/4ecafaa1-cae8-4930-af83-2d35718ce076" /># 🧮 SQL Analysis
 
 ## 📌 Objective
-State what the SQL analysis is trying to answer.
+State what exploratory data analysis and business query analysis questions the Queries can answer.
 
 ---
 
@@ -154,5 +154,21 @@ ORDER BY month
 Sample Result: 
 
 <img width="323" height="332" alt="business query 3" src="https://github.com/user-attachments/assets/61ccaab3-a7bb-4fcf-b63a-5bf85a9e5ea8" />
+
+<b> Summary of Types of Business Query Analysis Utilized</b> 
+- Time-Series Analysis 
+- Cohort Analysis 
+- Product Rankings based on total revenue.
+
+### 🔎 :mag_right: Top Business Insights 
+- Data Quality needs some improvement
+    - Location column: Majority of transactions and Most contirbuted to overall cafe total revenue.
+    - Missing Dates data had to be filtered out for the sake of analysis 
+- No consistent growth trend, January starts very strong but has a very hard dive in sales in Feburary. Sales over the month fail to surpass the total revenue occurred in January.
+- Weakest months at start (Feburary 2023) and end of year (December 2023), possibly due to post-holiday slowdowns and year-end slumps.
+- Majority of year salads were the top seller of the month all except for July 
+
+### Pargraph
+The analysis highlights several important insights that can directly inform business decisions. First, data quality requires improvement—particularly in the location column, which, despite containing the majority of transactions and contributing the most to overall café revenue, may not be fully reliable due to inconsistencies. Additionally, missing date values had to be excluded, which suggests that strengthening data collection processes should be a priority to ensure more accurate future analysis. From a performance standpoint, there is no consistent growth trend throughout the year: January begins with strong sales, but February experiences a sharp decline, and no subsequent month surpasses January’s revenue. This pattern indicates a need to investigate what drove January’s success—such as promotions, seasonality, or customer behavior—and determine how to replicate it in other months. The weakest periods, February and December, may reflect post-holiday slowdowns and end-of-year fatigue, signaling opportunities for targeted promotions or campaigns during these dips to stabilize revenue. Lastly, salads dominate as the top-selling item for most of the year, except in July, suggesting a strong and consistent customer preference. This insight can guide menu optimization, inventory planning, and marketing strategies, while also prompting further analysis into why July deviates—potentially revealing seasonal shifts in demand that the business can better capitalize on.
 
 
