@@ -1,4 +1,4 @@
-<img width="961" height="49" alt="image" src="https://github.com/user-attachments/assets/4ecafaa1-cae8-4930-af83-2d35718ce076" /># 🧮 SQL Analysis
+# 🧮 SQL Analysis
 
 ## 📌 Objective
 State what exploratory data analysis and business query analysis questions the Queries can answer.
