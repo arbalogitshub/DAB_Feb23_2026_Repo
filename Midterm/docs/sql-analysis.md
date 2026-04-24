@@ -65,6 +65,10 @@ ORDER BY SUM(quantity_purchased) DESC;
 Sample Result: 
 <img width="520" height="332" alt="exploratory data analysis 3 " src="https://github.com/user-attachments/assets/55136982-250d-4624-b9b0-c366c7cd1d54" />
 
+<b> Summary of Types of Exploratory Data Analysis Utilized</b> 
+- Utilized Aggregate functions with GROUPBYs
+- Utilized WHERE clause to filter out certain data
+- Utilized ORDER BY to view query results in organized manner.
 ---
 ## :briefcase: Business Query Analysis 
 
