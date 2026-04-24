@@ -21,7 +21,6 @@ The analysis follows a full workflow from raw data to insights, including data e
 * SQL Analysis – Answer key business questions
 * Visualization – Communicate insights clearly
 
-📌 Detailed methodology: docs/methodology.md
 
 ## 🧹 Data Preparation
 Data was cleaned and transformed using Excel.
