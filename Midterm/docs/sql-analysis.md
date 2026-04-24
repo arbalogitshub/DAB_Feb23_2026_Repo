@@ -1,4 +1,4 @@
-# 🧮 SQL Analysis
+# 🧮 Midterm Cafe Sales Analysis Report 
 
 ## 📌 Objective
 State what exploratory data analysis and business query analysis questions the Queries can answer.
