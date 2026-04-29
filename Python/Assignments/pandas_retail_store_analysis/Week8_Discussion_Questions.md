@@ -1,4 +1,4 @@
-# Discussion Questions
+# Week 8 Discussion Questions
 <b>1) What are the key advantages of using Pandas for data cleaning compared to other methods?</b><br />
 
 The key advantages that using Pandas for data cleaning purposes in comparison to other methods are the following: 
