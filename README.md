@@ -48,13 +48,14 @@ This repository contains the tools and skills I learned during my Data Analytics
 - [Python Lists and Dictionaries - Practice Exercise](Python/Assignments/python_lists_dictionaries_practice_excercise.ipynb)
 - [Python Data Analytics Workshop](Python/Assignments/week2_python_data_analytics_workshop.ipynb)
 - [Pandas Retail Store Analysis Weeks 8-9](https://github.com/arbalogitshub/DAB_Feb23_2026_Repo/tree/f65f0d6c507a56a5acb3c3fe092d65b9cf5c2046/Python/Assignments/pandas_retail_store_analysis)
-- 
+- [Python - Creating Custom Visualizations with Seaborn] ()
 
 ### **Excel Assignments**
 - [Analyzing Sales and Making Business Recommendations with Excel](Excel/analyzing-sales-data-workshop)
 
 ### **Tableau Assignments**
-- *Coming soon*
+- [Week 10 Workshop: Tableau Superstore Visualizations](https://public.tableau.com/app/profile/alvaro.gonzalez4182/viz/TableauSuperstoreVisualization_17774127651910/ProfitbyRegion)
+- [Week 11 Workshop: Uncovering Insights with Tableau](https://public.tableau.com/app/profile/alvaro.gonzalez4182/viz/HospitalWaitTimesAdmissionsandPatientVolumeAnalysis/HospitalDashboard)
 
 ## Mid-term Data Analytics Project:
 - [Turning Dirty Data into Business Insights: A Café Sales Analysis](https://github.com/arbalogitshub/DAB_Feb23_2026_Repo/tree/main/Midterm/submission_materials)
