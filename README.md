@@ -48,7 +48,7 @@ This repository contains the tools and skills I learned during my Data Analytics
 - [Python Lists and Dictionaries - Practice Exercise](Python/Assignments/python_lists_dictionaries_practice_excercise.ipynb)
 - [Python Data Analytics Workshop](Python/Assignments/week2_python_data_analytics_workshop.ipynb)
 - [Pandas Retail Store Analysis Weeks 8-9](https://github.com/arbalogitshub/DAB_Feb23_2026_Repo/tree/f65f0d6c507a56a5acb3c3fe092d65b9cf5c2046/Python/Assignments/pandas_retail_store_analysis)
-- [Python - Creating Custom Visualizations with Seaborn] ()
+- [Python - Creating Custom Visualizations with Seaborn](https://github.com/arbalogitshub/DAB_Feb23_2026_Repo/blob/main/Python/Assignments/wk12_Custom_Visualizations_Seaborn.ipynb)
 
 ### **Excel Assignments**
 - [Analyzing Sales and Making Business Recommendations with Excel](Excel/analyzing-sales-data-workshop)
